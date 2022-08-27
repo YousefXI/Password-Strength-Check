@@ -155,7 +155,8 @@ form .indicator {
 form .text {
    font-size: 20px;
    font-weight: 500;
-   margin: -10px;
+   margin: -5px;
+   margin-top: 5px;
    text-align: center;
    display: none;
 }
