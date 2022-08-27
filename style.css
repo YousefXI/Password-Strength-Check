@@ -92,6 +92,8 @@ form .field {
    transition: all 0.3;
 }
 
+/* fix width !! */
+
 .field input:focus {
    border-color: #27a360;
    box-shadow: inset 0 0 3px #2fd072;
@@ -105,14 +107,15 @@ form .field {
    cursor: pointer;
    font-size: 15px;
    font-weight: 600;
+   display: none;
 }
 
 form .indicator {
    height: 10px;
-   display: flex;
    align-items: center;
    justify-content: space-between;
    margin: 10px 0;
+   display: none;
 }
 
 .indicator span {
@@ -134,17 +137,18 @@ form .indicator {
    left: 0;
    width: 100%;
    height: 100%;
-   background: red;
    border-radius: 5px;
 }
 
-.indicator span.weak:before {
+.indicator span.active.weak:before {
    background: #ff4757;
 }
-.indicator span.medium:before {
+
+.indicator span.active.medium:before {
    background: orange;
 }
-.indicator span.strong:before {
+
+.indicator span.active.strong:before {
    background: #23ad5c;
 }
 
@@ -153,14 +157,17 @@ form .text {
    font-weight: 500;
    margin: -10px;
    text-align: center;
+   display: none;
 }
 
 form .text.weak {
    color: #ff4757;
 }
+
 form .text.medium {
    color: orange;
 }
+
 form .text.strong {
    color: #23ad5c;
 }
