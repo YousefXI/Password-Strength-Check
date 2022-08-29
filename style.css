@@ -8,6 +8,7 @@
    --light-gray: #ccc;
    --dark-gray: #474747;
    --light: #ffffff;
+   --secondary: #3ea9eb;
 }
 
 /* ------------------ */
@@ -92,11 +93,9 @@ form .field {
    transition: all 0.3;
 }
 
-/* fix width !! */
-
 .field input:focus {
-   border-color: #27a360;
-   box-shadow: inset 0 0 3px #2fd072;
+   box-shadow: 0 0 4px var(--secondary);
+   border: 1px solid var(--secondary);
 }
 
 .field .showBtn {
@@ -108,6 +107,12 @@ form .field {
    font-size: 15px;
    font-weight: 600;
    display: none;
+   width: 25px;
+   opacity: 0.3;
+   transition: opacity 200ms;
+}
+.field .showBtn:hover {
+   opacity: 0.6;
 }
 
 form .indicator {
