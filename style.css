@@ -149,8 +149,20 @@ form .indicator {
    background: #ff4757;
 }
 
+.indicator span.medium.weak:before {
+   background: orange;
+}
+
 .indicator span.active.medium:before {
    background: orange;
+}
+
+.indicator span.strong.weak:before {
+   background: #23ad5c;
+}
+
+.indicator span.strong.medium:before {
+   background: #23ad5c;
 }
 
 .indicator span.active.strong:before {

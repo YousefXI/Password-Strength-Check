@@ -47,23 +47,34 @@ function trigger() {
       }
 
       if (no == 2) {
+         //Changing Colors from Weak to Medium
          medium.classList.add("active");
+         weak.classList.add("medium");
          text.textContent = "Your password is medium";
          text.classList.add("medium");
       } else {
          medium.classList.remove("active");
+         weak.classList.remove("medium");
+
          text.classList.remove("medium");
       }
 
       if (no == 3) {
-         medium.classList.add("active");
+         //Changing Colors from Medium to Strong
+         medium.classList.add("strong");
+         weak.classList.add("strong");
          strong.classList.add("active");
+
          text.textContent = "Your password is strong";
          text.classList.add("strong");
       } else {
          strong.classList.remove("active");
+         medium.classList.remove("strong");
+         weak.classList.remove("strong");
+
          text.classList.remove("strong");
       }
+
       showBtn.style.display = "block";
       showBtn.onclick = function () {
          if (input.type == "password") {
